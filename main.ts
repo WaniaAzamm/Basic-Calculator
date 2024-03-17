@@ -41,4 +41,5 @@ else if (chalk.greenBright(input1.operator === "Modulus")) {
 }
 else {
   console.log(chalk.red("Please Select valid Operator"));
-}
+};
+
