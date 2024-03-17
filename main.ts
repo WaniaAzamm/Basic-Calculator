@@ -6,13 +6,11 @@ const input1 = await inquirer.prompt([
     type: "number",
     message: "Enter your First Number:",
   },
-
   {
     name: "num2",
     type: "number",
     message: "Enter your Second Number:",
   },
-
   {
     name: "operator",
     type: "list",
@@ -26,22 +24,21 @@ const input1 = await inquirer.prompt([
     ],
   },
 ]);
-
 if (input1.operator === "addition") {
-  chalk.greenBright(console.log(input1.num1 + input1.num2));
+  console.log(chalk.greenBright(input1.num1 + input1.num2));
 }
 else if (input1.operator === "subtraction") {
-  chalk.greenBright(console.log(input1.num1 - input1.num2));
+  console.log(chalk.greenBright(input1.num1 - input1.num2));
 }
 else if (input1.operator === "Multiplication") {
-  chalk.greenBright(console.log(input1.num1 * input1.num2));
-} 
-else if (input1.operator === "Division") {
-  chalk.greenBright(console.log(input1.num1 / input1.num2));
+  console.log(chalk.greenBright(input1.num1 * input1.num2));
 }
-else if (input1.operator === "Modulus") {
-  chalk.greenBright(console.log(input1.num1 % input1.num2));
+else if (input1.operator === "Division") {
+  console.log(chalk.greenBright(input1.num1 / input1.num2));
+}
+else if (chalk.greenBright(input1.operator === "Modulus")) {
+  input1.num1 % input1.num2;
 }
 else {
-  chalk.greenBright(console.log("Please Select valid Operator"));
+  console.log(chalk.red("Please Select valid Operator"));
 }
