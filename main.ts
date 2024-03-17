@@ -42,5 +42,5 @@ else if (input1.operator === "Modulus") {
   console.log(input1.num1 % input1.num2);
 }
 else {
-  console.log("Invalid Operator");
+  console.log("Please Select valid Operator");
 };
