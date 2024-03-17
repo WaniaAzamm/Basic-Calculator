@@ -1,4 +1,5 @@
 import inquirer from "inquirer";
+import chalk from "chalk";
 const input1 = await inquirer.prompt([
   {
     name: "num1",
@@ -27,20 +28,20 @@ const input1 = await inquirer.prompt([
 ]);
 
 if (input1.operator === "addition") {
-  console.log(input1.num1 + input1.num2);
+  chalk.greenBright(console.log(input1.num1 + input1.num2));
 }
 else if (input1.operator === "subtraction") {
-  console.log(input1.num1 - input1.num2);
+  chalk.greenBright(console.log(input1.num1 - input1.num2));
 }
 else if (input1.operator === "Multiplication") {
-  console.log(input1.num1 * input1.num2);
-}
+  chalk.greenBright(console.log(input1.num1 * input1.num2));
+} 
 else if (input1.operator === "Division") {
-  console.log(input1.num1 / input1.num2);
+  chalk.greenBright(console.log(input1.num1 / input1.num2));
 }
 else if (input1.operator === "Modulus") {
-  console.log(input1.num1 % input1.num2);
+  chalk.greenBright(console.log(input1.num1 % input1.num2));
 }
 else {
-  console.log("Please Select valid Operator");
-};
+  chalk.greenBright(console.log("Please Select valid Operator"));
+}
